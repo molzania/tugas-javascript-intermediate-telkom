@@ -16,17 +16,20 @@
 
  //Jawab :
 
- function reverse(arr){
+ const arr = [1,2,3];
+ const arr2 = [8,1,5,7];
+
+ function reverse(array1){
    let newArr = [];
-   while (arr.length){
-     newArr.push(arr.pop());
+   while (array1.length){
+     newArr.push(array1.pop());
    }
    return newArr;
  }
 
 
- console.log(reverse([1,2,3]));
- console.log(reverse([8,1,5,7]));
+ console.log(reverse(arr));
+ console.log(reverse(arr2));
 
 // Soal - 02
 // Kamu diminta untuk membuat sebuah fungsi yang akan mengembalikan total berapa elemen bilangan/number yang melebihi nilai rata-rata dari sebuah array, fungsi tersebut memiliki spesifikasi sebagai berikut:
@@ -43,6 +46,20 @@
 
 // console.log(getAverage(arr1))
 // console.log(getAverage(arr2))
+
+// Jawab :
+
+const arr3 = [1,3,4,1,2,8];
+const arr4 = [5,6,7,8,1,3];
+
+function getAverage(array2){
+  const avg = array2.reduce((a,b) => a + b, 0) / array2.length;
+  return avg;
+}
+
+console.log(getAverage(arr3));
+console.log(getAverage(arr4));
+
 // Soal - 03
 // Kamu diminta untuk membuat sebuah fungsi yang mana akan mencari sebuah elemen didalam array multi dimensi, fungsi tersebut memiliki spesifikasi sebagai berikut:
 
