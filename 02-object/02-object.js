@@ -40,7 +40,7 @@
        ],
  greeting: function() {
      console.log("Hello World");
-   }
+   },
  }
 
  function personName(nama) {
@@ -68,7 +68,7 @@ function personGreeting(sentence){
 console.log(personName("Molly"));
 console.log(personAge(150));
 console.log(personFaveDrinks("milk shake"));
-console.log(personGreeting("Molly"));
+console.log(personGreeting("Hello Molly"));
 
 
 // Soal - 02
@@ -105,6 +105,12 @@ console.log(personGreeting("Molly"));
 // console.log(espresso);
 // console.log(coffeeBrand);
 // console.log(isMilkVegan)
+
+
+
+
+
+
 // Soal - 03
 // Kamu adalah seorang trader pemula, dan karna memiliki background IT kamu ingin membuat sebuah fungsi calculateIncome untuk mendapatkan nilai dari keuntungan yang dapat kita peroleh dengan rumus [sum of (sell - buy)] untuk setiap koin yang tersedia
 

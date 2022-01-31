@@ -105,7 +105,7 @@ function searchInArray(arr5, num) {
   const array3 = arr5.flat(1);
   const checkNum = array3.includes(num); 
   if(checkNum === true){ 
-  const indexArray3 =  array3.findIndex(newArray3 => newArray3.value === num);
+  const indexArray3 =  array3.findIndex(newArray3 => newArray3.value == num);
     return indexArray3; 
   } else if (checkNum === false){
     return null;
