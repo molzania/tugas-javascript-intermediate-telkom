@@ -19,18 +19,18 @@
  const arr = [1,2,3];
  const arr2 = [8,1,5,7];
 
- function reverse(array1){
+ function reverse(arrayOld){
    let newArr = [];
-   while (array1.length){
-     newArr.push(array1.pop());
+   while (arrayOld.length){
+     newArr.push(arrayOld.pop());
    }
    return newArr;
  }
 
 
- console.log(reverse(arr));
- console.log(reverse(arr2));
-
+ console.log(arr, reverse(arr));
+ console.log(arr2, reverse(arr2));
+ 
 // Soal - 02
 // Kamu diminta untuk membuat sebuah fungsi yang akan mengembalikan total berapa elemen bilangan/number yang melebihi nilai rata-rata dari sebuah array, fungsi tersebut memiliki spesifikasi sebagai berikut:
 
@@ -54,11 +54,21 @@ const arr4 = [5,6,7,8,1,3];
 
 function getAverage(array2){
   const avg = array2.reduce((a,b) => a + b, 0) / array2.length;
-  return avg;
+
+  for (let i = 0; i <= array2.length; i++){
+    let num = array2.forEach(value);
+    if(num >= avg) {
+      
+      return "Ada" + num;
+    } else {
+      return false;
+    }
+  }
 }
 
 console.log(getAverage(arr3));
 console.log(getAverage(arr4));
+
 
 // Soal - 03
 // Kamu diminta untuk membuat sebuah fungsi yang mana akan mencari sebuah elemen didalam array multi dimensi, fungsi tersebut memiliki spesifikasi sebagai berikut:
@@ -87,3 +97,22 @@ console.log(getAverage(arr4));
 // console.log(searchInArray(arr, 2));
 // console.log(searchInArray(arr, 4));
 // console.log(searchInArray(arr, 8));
+
+//Jawab:
+const arr5 = [[10],[9, 7, 1],[2, 8]];
+
+function searchInArray(arr5, num) {
+  const array3 = arr5.flat(1);
+  const checkNum = array3.includes(num); 
+  if(checkNum === true){ 
+  const indexArray3 =  array3.findIndex(newArray3 => newArray3.value === num);
+    return indexArray3; 
+  } else if (checkNum === false){
+    return null;
+  }
+}
+
+console.log(searchInArray(arr5, 3));
+console.log(searchInArray(arr5, 2));
+ console.log(searchInArray(arr, 4));
+  console.log(searchInArray(arr, 8));

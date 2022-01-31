@@ -1,59 +1,150 @@
 // Soal - 01
-// Kamu diminta untuk membuat sebuah fungsi reverse yang mana akan membalik sebuah array, fungsi reverse memiliki sepsifikasi sebagai berikut:
+// Kamu diminta untuk mengikuti instruksi dibawah dengan seksama:
 
-// memiliki 1 parameter yaitu:
-// arr [Array] => array yang akan kita manipulasi nilainya
-// return value [Number] berupa sebuah array baru yang sudah terbalik
-// Untuk mempermudah proses pengerjaan kamu dapat menggunakan code template dibawah ini
+// ubah field name pada variable person menjadi namamu sendiri
+// ubah field favDrinks yang berisi "temulawak" menjadi "tap water"
+// ubah field greeting menjadi sebuah fungsi, dengan spesifikasi
+// memiliki 1 parameter
+// name [String] => nama seseorang yang akan disapa
+// return value [String] => akan mengembalikan sebuah String dengan format "Hello, $NAME"
+// const person = {
+//   name: "person A",
+//   age: 100,
+//   favDrinks: [
+//     "coffee",
+//     "jamu temulawak",
+//     "tea"
+//   ],
+//   greeting: function() {
+//     console.log("hello world")
+//   }
+// }
 
-// const arr = [1, 2, 3];
-// const arr2 = [8, 1, 5, 7];
-// function reverse( .... ) { .... }
+// /// EDIT HERE
 
-// const newArr = reverse(arr);
-// const newArr2 = reverse(arr2);
+// /// STOP
 
-// console.log(arr, newArr);
-// console.log(arr2, newArr2);
+// console.log(person.name);
+// console.log(person.age);
+// console.log(person.favDrinks);
+// console.log(person.greeting("John Watson"));
+
+//Jawab :
+ const person = {
+   name: "Person A",
+   age: 100,
+   favDrinks: [
+     "coffee",
+     "temulawak",
+     "tea"
+       ],
+ greeting: function() {
+     console.log("Hello World");
+   }
+ }
+
+ function personName(nama) {
+  person.name = nama;
+  return person;
+}
+
+function personFaveDrinks(favedrinks){
+  person.favDrinks[1] = favedrinks;
+  return person;
+}
+
+function personAge(age) {
+  person.age = age;
+  return person;
+}
+
+function personGreeting(sentence){
+  person.greeting = function() {
+    console.log(sentence);
+  }
+  return person;
+}
+
+console.log(personName("Molly"));
+console.log(personAge(150));
+console.log(personFaveDrinks("milk shake"));
+console.log(personGreeting("Molly"));
+
+
 // Soal - 02
-// Kamu diminta untuk membuat sebuah fungsi yang akan mengembalikan total berapa elemen bilangan/number yang melebihi nilai rata-rata dari sebuah array, fungsi tersebut memiliki spesifikasi sebagai berikut:
+// Kamu diminta untuk membuat sebuah fungsi yang akan mengembalikan sebuah nilai berdasarkan struktur Object, fungsi tersebut memiliki spesifikasi sebagai berikut:
 
-// memiliki 1 parameter:
-// arr [Array of Number] => array 1 dimensi dengan nilai Number
-// return value [Number] total angka yang melebihi nilai rata-rata
-// Untuk mempermudah proses pengerjaan kamu dapat menggunakan code template dibawah ini
+// 2 Parameter
+// obj Object => object yang akan kita ambil value-nya
+// path String => letak dari nilai yang ingin kita ambil
+// return value
+// apabila kita tidak dapat menemukan field yang dituju, maka kita akan mengembalikan null
+// apabila kita menemukan menemukan field yang dituju maka kita akan mengembalikan value dari field tersebut
+// function getObjectValue( .... ) { .... }
 
-// const arr1 = [1, 3, 4, 1, 2, 8];
-// const arr2 = [5, 6, 7, 8, 1, 3];
+// const milkBasedCoffee = {
+//   name: "latte",
+//   ingredients: {
+//     espresso: {
+//       origin: "lampung",
+//       roastProfile: "medium to dark"
+//       ratio: 1
+//     },
+//     milk: {
+//       brand: "susu murni",
+//       isVegan: false,
+//       ratio: 5
+//     }
+//   },
+// }
 
-// function getAverage( .... ) { .... }
+// const espresso = getObjectValue(milkBasedCoffee, "ingredients.espresso.origin");
+// const coffeeBrand = getObjectValue(milkBasedCoffee, "ingredients.espresso.brand");
+// const isMilkVegan = getObjectValue(milkBasedCoffee, "ingredients.milk.isVegan");
 
-// console.log(getAverage(arr1))
-// console.log(getAverage(arr2))
+// console.log(espresso);
+// console.log(coffeeBrand);
+// console.log(isMilkVegan)
 // Soal - 03
-// Kamu diminta untuk membuat sebuah fungsi yang mana akan mencari sebuah elemen didalam array multi dimensi, fungsi tersebut memiliki spesifikasi sebagai berikut:
+// Kamu adalah seorang trader pemula, dan karna memiliki background IT kamu ingin membuat sebuah fungsi calculateIncome untuk mendapatkan nilai dari keuntungan yang dapat kita peroleh dengan rumus [sum of (sell - buy)] untuk setiap koin yang tersedia
 
-// memiliki 2 parameter:
-// arr [Array] => array multi dimensi yang akan kita proses
-// num [Number] => angka yang ingin kita cari
-// return value [Number]
-// fungsi akan mengembalikan null apabila angka yang dicari tidak ditemukan
-// fungsi akan mengembalikan index dari angka yang dicari
+// Gunakan code template yand diberikan untuk menyelesaikan masalah
+// Dilarang untuk mengubah nama variable atau function yang sudah tersedia didalam code template
+// Segala perubahan hanya dapat dilakukan didalamm fungsi calculateIncome
+// Hasil haruslah sesuai dengan expektasi yang diberikan
 // Langkah-langkah pengerjaan:
 
-// karna fungsi tersebut menerima sebuah array multi dimensi maka kita perlu merubahnya kedalam 1 dimensi terlebih dahulu
-// setelah array 1 dimensi terbentuk, maka kita bisa mencari nilai yang ingin dicari oleh user
-// apabila kita tidak menemukan nilai tersebut maka kembalikan null
-// dan apabila kita menemukan nilai tersebut, maka kita akan mengembalikan index dari nilai tersebut (index dalam bentuk 1 dimensi bukan multi dimensi)
-// const arr = [
-//   [10],
-//   [9, 7, 1],
-//   [2, 8],
+// hitung keuntungan yang kita hasilkan dari tiap-tiap koin dengan cara (sell - buy)
+// ulangi langkah pertama, hingga kita selesai menghitung seluruh history transaksi yang ada (dalam contoh ini kita ada 3 buah history dari hari 1, 2, dan 3)
+// jumlahkan seluruh keuntungan yang kita buat selama 3 hari berdasarkan koin yang kita gunakan
+// rangkuman dari pendapatan kita HARUS berupa sebuah object
+// pengerjaan harus menggunakan built-in method reduce
+// Untuk mempermudah proses pengerjaan kamu dapat menggunakan code template dibawah ini
+
+// // dibawah ini merupakan history transasksi yang telah kalian lakukan
+// const items = [
+//   {
+//     btc: { buy: 10, sell: 9 },
+//     eth: { buy: 8, sell: 7.5 },
+//     doge: { buy: 7, sell: 6.5 },
+//     day: 1,
+//   },
+//   {
+//     btc: { buy: 9, sell: 5 },
+//     eth: { buy: 7, sell: 4 },
+//     doge: { buy: 6, sell: 3 },
+//     day: 2,
+//   },
+//   {
+//     btc: { buy: 5, sell: 10 },
+//     eth: { buy: 4, sell: 6 },
+//     doge: { buy: 3, sell: 4 },
+//     day: 3,
+//   },
 // ];
 
-// function searchInArray( .... ) { .... }
+// const calculateIncome = (items) => {
+//   /// EDIT DOWN HERE
+// }
 
-// console.log(searchInArray(arr, 3));
-// console.log(searchInArray(arr, 2));
-// console.log(searchInArray(arr, 4));
-// console.log(searchInArray(arr, 8));
+// console.log(calculateIncome(items))
