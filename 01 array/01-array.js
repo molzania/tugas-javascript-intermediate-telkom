@@ -114,5 +114,5 @@ function searchInArray(arr5, num) {
 
 console.log(searchInArray(arr5, 3));
 console.log(searchInArray(arr5, 2));
- console.log(searchInArray(arr, 4));
-  console.log(searchInArray(arr, 8));
+ console.log(searchInArray(arr5, 4));
+  console.log(searchInArray(arr5, 8));

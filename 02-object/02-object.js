@@ -59,7 +59,7 @@ function personAge(age) {
 }
 
 function personGreeting(sentence){
-  person.greeting = function() {
+  person.greeting[0] = function() {
     console.log(sentence);
   }
   return person;
@@ -106,7 +106,25 @@ console.log(personGreeting("Hello Molly"));
 // console.log(coffeeBrand);
 // console.log(isMilkVegan)
 
+//Jawab :
+const milkBasedCoffee = { 
+  name: "latte",
+  ingredients: {
+    espresso:{
+      origin: "Lampung",
+      roastProfile: "medium to dark",
+      ratio: 1
+    },
+  milk: {
+    brand: "susu murni",
+    isVegan: false,
+    ratio: 5
+  },
+}
 
+function getObjectValue(milkBasedCoffee, str){
+
+}
 
 
 
@@ -148,9 +166,31 @@ console.log(personGreeting("Hello Molly"));
 //     day: 3,
 //   },
 // ];
+const items = [
+   {
+     btc: { buy: 10, sell: 9 },
+     eth: { buy: 8, sell: 7.5 },
+     doge: { buy: 7, sell: 6.5 },
+          day: 1,
+   },
+   {
+     btc: { buy: 9, sell: 5 },
+     eth: { buy: 7, sell: 4 },
+     doge: { buy: 6, sell: 3 },
+     day: 2,
+       },
+ {
+     btc: { buy: 5, sell: 10 },
+     eth: { buy: 4, sell: 6 },
+     doge: { buy: 3, sell: 4 },
+     day: 3,
+   },
+ ];
 
-// const calculateIncome = (items) => {
-//   /// EDIT DOWN HERE
-// }
+ const calculateIncome = (items) => {
+   var sumBTC = 0;
+   var sumEth = 0;
+    
+ }
 
-// console.log(calculateIncome(items))
+console.log(calculateIncome(items))
