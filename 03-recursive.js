@@ -43,15 +43,31 @@ function sumOfArray(arr){
 // langkah terakhir adalah mengembalikan jumlah dari nilai yang melebihi nilai rata-rata
 // Untuk mempermudah pengerjaan kami sudah menyediakan code template
 
-// const avg1 = .....;
-// const avg2 = .....;
-// function countAboveAvg( .... ) { .... }
+const avg1 = ((arr1.reduce( ( a, b ) => a + b, 0 )) / arr1.length); 
+const avg2 = ((arr2.reduce( ( c, d ) => c + d, 0 )) / arr2.length); 
 
-// const totalAboveAvg1 = countAboveAvg(arr1, avg1);
-// const totalAboveAvg2 = countAboveAvg(arr2, avg2);
+ console.log(avg1);
+ console.log(avg2);
 
-// console.log(totalAboveAvg1);
-// console.log(totalAboveAvg2);
+ function countAboveAvg(array, avg) { 
+   for(var i=0; i<= array.length; i++){
+     if(array.includes(array[i])> avg){
+       const newArr1 = [];
+       array.includes
+     return true;
+   } else {
+     return false;
+   }
+
+  }
+  }
+
+ const totalAboveAvg1 = countAboveAvg(arr1, avg1);
+ const totalAboveAvg2 = countAboveAvg(arr2, avg2);
+
+ console.log(totalAboveAvg1);
+ console.log(totalAboveAvg2);
+
 // Soal - 03
 // Kalian diminta untuk membuat fungsi yang mana akan mencari sebuah nilai didalam array of number, fungsi tersebut memiliki spesifikasi sebagai berikut:
 
@@ -68,6 +84,8 @@ function sumOfArray(arr){
 // searchInArray(arr, 6);
 // searchInArray(arr, 1);
 // searchInArray(arr, 8);
+
+
 // Soal - 04
 // Kalian diminta untuk membuat fungsi yang mana nantinya akan mencetak sebuah piramida alfabet, fungsi tersebut memiliki spesifikasi sebagai berikut:
 
@@ -92,3 +110,4 @@ function sumOfArray(arr){
 // trianglePattern(first, first);
 // trianglePattern(second, second);
 // trianglePattern(third, third);
+

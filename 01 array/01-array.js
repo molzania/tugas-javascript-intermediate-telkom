@@ -105,8 +105,17 @@ function searchInArray(arr5, num) {
   const array3 = arr5.flat(1);
   const checkNum = array3.includes(num); 
   if(checkNum === true){ 
-  const indexArray3 =  array3.findIndex(newArray3 => newArray3.value == num);
-    return indexArray3; 
+    for(a = 0; a<=array3.length; a++){
+      array3.findIndex(newArray3 => newArray3.value == num);
+      return newArray3.value;
+    }
+    const newArray3 = [];
+    for(b = 0; b <= newArray3.length; b++){
+      const indexNewArray = newArray3.indexOf(arr5);
+      return indexNewArray;
+    }
+    indexNewArray = [];
+    return `Ada ${num}bilangan yang melebihi nilai rata-rata yaitu${indexNewArray[0]} & ${indexNewArray[1]}`;
   } else if (checkNum === false){
     return null;
   }
